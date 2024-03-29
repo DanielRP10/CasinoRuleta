@@ -9,45 +9,49 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body class="lg">
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
-        <form action="">
-            <div class="row row border rounded-5 p-1 bg-white shadow box-area registro-conte">
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+        <form action="" class="d-flex" method="POST" enctype="multipart/form-data">
+            <div class="row border rounded-5 p-1 bg-white shadow box-area registro-conte">
                 <div class="header-text mb-4 text-wrap text-center">
                     <h2>Registro</h2>
                 </div>
                 <div class="featured-image mb-3 text-center">
                     <img src="../recursos/img/logo.png" class="img-fluid" style="width: 100px;">
+                    <?php
+                        include "../modelo/conexion.php";
+                        include "../controlador/Registro_jugador.php";
+                    ?>
                 </div>
                 <div class="col-6 mb-3">
-                    <label for="">Nombre completo</label><br>
+                    <label>Nombre completo</label><br>
                     <input type="text" class="form-control form-control-lg bg-light fs-6" 
-                    placeholder="Nombres">
+                    placeholder="Nombres" name="nombre">
                 </div>
                 <div class="col-6 mb-3">
-                    <label for="">Apellidos completos</label><br>
-                    <input type="tex" class="form-control form-control-lg bg-light fs-6" placeholder="Apellidos">
+                    <label>Apellidos completos</label><br>
+                    <input type="tex" class="form-control form-control-lg bg-light fs-6" placeholder="Apellidos" name="apellido">
                 </div>
                 <div class="col-6 mb-3">
-                    <label for="">Fecha Nacimiento</label><br>
-                    <input type="date" class="form-control form-control-lg bg-light fs-6">
+                    <label>Fecha Nacimiento</label><br>
+                    <input type="date" class="form-control form-control-lg bg-light fs-6" name="fecha">
                 </div>
                 <div class="col-6 mb-3">
-                    <label for="">Usuario</label><br>
-                    <input type="tex" class="form-control form-control-lg bg-light fs-6" placeholder="Usuario">
+                    <label>Usuario</label><br>
+                    <input type="tex" class="form-control form-control-lg bg-light fs-6" placeholder="Usuario" name="usuario">
                 </div>
                 <div class="col-6 mb-3">
-                    <label for="">contraseña</label><br>
-                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Contraseña">
+                    <label>Contraseña</label><br>
+                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Contraseña" name="contra">
                 </div>
                 <div class="col-6 mb-3">
-                    <label for="">Foto</label><br>
-                    <input type="file" class="form-control form-control-lg bg-light fs-6">
+                    <label>Foto</label><br>
+                    <input type="file" class="form-control form-control-lg bg-light fs-6" name="foto">
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-lg btn-primary w-100 fs-6">Registrame</button>
+                    <button type="submit" class="btn btn-lg btn-primary w-100 fs-6" name="btnregistrar" value="ok">Registrame</button>
                 </div>
                 <div class="row">
-                    <small>¿Ya tienes cuenta? <a href="Login.php">Iniciar Sesion</a></small>
+                    <small>¿Ya tienes cuenta? <a href="../Login.php">Iniciar Sesion</a></small>
                 </div>
             </div>
         </form>
