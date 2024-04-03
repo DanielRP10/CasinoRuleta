@@ -14,6 +14,7 @@
 </head>
 <body>
     <div>
+        <h4>Prueba</h4>
         <?php 
           echo  $_SESSION["nombres"]." ".$_SESSION["apellidos"];
         ?>
