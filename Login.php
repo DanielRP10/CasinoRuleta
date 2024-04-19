@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
     <link rel="shortcut icon" href="recursos/img/logo.png"/>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body class="lg">
-    <div class="container d-flex justify-content-center align-items-center min-vh-100 ">
+<body class="lg"> 
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">     
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #daeaf6">
                 <div class="featured-image mb-3">
-                    <img src="recursos/img/logo.png" class="img-fluid" style="width: 250px;">
+                    <img src="recursos/img/logo.png" class="img-fluid" style="width: 150px;">
                 </div>
             </div>
             <div class="col-md-6 ring-box">

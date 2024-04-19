@@ -1,0 +1,229 @@
+/* -------------------------------------------------COMIENZA EL ESTILO DEL LOGIN Y REGISTRO ----------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+.lg{
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../recursos/img/fondo.jpeg');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    width: 100vw; /* Establece el ancho de la imagen en el 100% del ancho de la ventana del navegador */
+    height: 100vh; /* Establece la altura de la imagen en el 100% del ancho de la ventana del navegador */
+}
+/*------------ Login container ------------*/
+.box-area{
+    width: 750px;
+}
+/*------------ Right box ------------*/
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+/*------------ Custom Placeholder ------------*/
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+/* -------------------------------------------------ALGUNOS ESTILO DEL REGISTRO ----------------------------------*/
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px){
+     .box-area{
+        margin: 0 10px;
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+}
+/* registro */
+.registro-conte{
+    width: 600px;
+}
+@media only screen and (max-width: 768px) {
+    .lg {
+        background-size: auto;
+    }
+    .registro-conte {
+        width: 90%; /* Ajusta el ancho del contenedor en pantallas pequeñas */
+        margin: auto; /* Centra el contenedor en pantallas pequeñas */
+    }
+}
+
+/* -------------------------------------------------COMIENZA EL ESTILO DEL HOME ----------------------------------*/
+
+.cuerpo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0E0E0;
+}
+.lista{
+    align-items: flex-start;
+    margin-left: auto;
+}
+/* .titulo{
+    background-color: black;
+    color: #c9ac04;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+} */
+
+.navegacion{
+    margin-top: 40px;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navegacion a{
+    background-color: #FFD700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0;
+    font-weight: lighter;
+    height: 20px;
+}
+.navegacion button {
+    background-color: #FFD700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0;
+    font-weight: lighter;
+    height: 40px;
+}
+
+.navegacion a:hover, .navegacion button:hover {
+    transition: all 0.3s ease;
+    background-color: #8B0000;
+    color: #FFFFFF;
+    border-color: #8B0000;
+}
+
+.section{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.cuadro{
+    width: 20%;
+    height: 350px;
+    background-color: black;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    padding: 80px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.avatar{
+    width: 65%;
+    height: 200px;
+    background-color: #E0E0E0;
+    margin: 0 auto 50px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.boton a{
+    text-decoration: none;
+    background-color: #8B0000;
+    color: black;
+    font-size: large;
+    padding: 0.5em 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #FFD700;
+}
+
+.boton a:hover {
+    background-color: #FFD700; 
+    color: black;
+    border-color: black;
+}
+
+.swal2-popup {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+.swal2-title {
+    color: #FFD700; 
+}
+
+.swal2-content {
+    color: #FFFFFF; 
+}
+
+.custom-confirm-button {
+    width: auto; /* Ajustar el ancho automáticamente al contenido */
+    height: auto;
+    font-size: 16px; 
+}
+
+/* -------------------------------------------------COMIENZA EL ESTILO DEL TABLERO ----------------------------------*/
+
+.section1{
+    background-color: rgba(255,255,255,0.2);
+    padding: 0 10px 10px 10px;
+    border-radius: 8px;
+    margin: 40px auto;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.tab{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 12px auto;
+    text-align: center;
+    background-color: #8B0000;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.A{
+    background-color: #c9ac04;
+    width: 150px;
+    height: 40px;
+    margin: 20px auto;
+    border: 2px solid black;
+}
+
+.B{
+    background-color: #c9ac04;
+    width: 150px;
+    height: 40px;
+    margin: 20px auto;
+    border: 2px solid black;
+}
