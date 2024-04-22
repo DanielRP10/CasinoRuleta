@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <link rel="shortcut icon" href="recursos/img/logo.png"/>
     <link rel="shortcut icon" href="../recursos/img/logo.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
@@ -47,8 +48,15 @@
                     <label>Foto</label><br>
                     <input type="file" class="form-control form-control-lg bg-light fs-6" name="foto">
                 </div>
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-lg btn-primary w-100 fs-6" name="btnregistrar" value="ok">Registrame</button>
+                <div class="col-6 mb-3 ">
+                    <center>
+                        <button type="submit" class="btn btn-sm btn-success fs-6 bregistrar" name="btnregistrar" value="ok">Registrarme</button>
+                    </center>
+                </div>
+                <div class="col-6 mb-3 ">
+                    <center>
+                        <button type="reset" class="btn btn-sm btn-primary fs-6 bregistrar">Limpiar</button>
+                    </center>
                 </div>
                 <div class="row">
                     <small>¿Ya tienes cuenta? <a href="../Login.php">Iniciar Sesion</a></small>

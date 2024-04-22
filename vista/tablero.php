@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
-<body>    
+<body class="lg">    
     <header>
         <h1>BIENVENIDOS A CHEROS</h1>
     </header>

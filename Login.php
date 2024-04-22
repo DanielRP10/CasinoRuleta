@@ -35,7 +35,7 @@
                             <!-- <div class="fas fa-eye verPassword" onclick="vista()" id="verPassword"></div> -->
                         </div>
                         <div class="input-group mb-3">
-                            <button type="submit" class="btn btn-lg btn-primary w-100 fs-6" name="btniniciar" value="ok">Iniciar Sesion</button>
+                            <button type="submit" class="btn btn-md btn-primary w-100 h-50 fs-6" name="btniniciar" value="ok">Iniciar Sesion</button>
                         </div>
                         <div class="row">
                             <small>¿No tienes cuenta? <a href="vista/Registro.php">Regístrate ahora</a></small>

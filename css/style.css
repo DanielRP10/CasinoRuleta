@@ -2,12 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 .lg{
-    font-family: 'Poppins', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url('../recursos/img/fondo.jpeg');
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
-    width: 100vw; /* Establece el ancho de la imagen en el 100% del ancho de la ventana del navegador */
-    height: 100vh; /* Establece la altura de la imagen en el 100% del ancho de la ventana del navegador */
 }
 /*------------ Login container ------------*/
 .box-area{
@@ -27,6 +25,7 @@
 .rounded-5{
     border-radius: 30px;
 }
+
 /* -------------------------------------------------ALGUNOS ESTILO DEL REGISTRO ----------------------------------*/
 /*------------ For small screens------------*/
 @media only screen and (max-width: 768px){
@@ -44,6 +43,11 @@
 /* registro */
 .registro-conte{
     width: 600px;
+}
+.bregistrar{
+
+    height: 100%;
+    width: 50%;
 }
 @media only screen and (max-width: 768px) {
     .lg {
@@ -66,6 +70,9 @@
 .lista{
     align-items: flex-start;
     margin-left: auto;
+}
+#menu-principal{
+    background-color: #daeaf6;
 }
 /* .titulo{
     background-color: black;
@@ -128,12 +135,13 @@
 }
 
 .cuadro{
+    align-items: flex-end;
     width: 20%;
     height: 350px;
-    background-color: black;
-    border: 2px solid #FFD700;
+    background-color: rgb(125, 156, 135, 0.7);
+    border: 2px solid #443F3E;
     border-radius: 5px;
-    padding: 80px;
+    padding: 35px;
     box-sizing: border-box;
     text-align: center;
     margin: 0 auto;
@@ -142,15 +150,12 @@
 .avatar{
     width: 65%;
     height: 200px;
-    background-color: #E0E0E0;
-    margin: 0 auto 50px;
-    border-radius: 5px;
-    border: 2px solid black;
+    margin: 0 auto 0px;
 }
 
 .boton a{
     text-decoration: none;
-    background-color: #8B0000;
+    background-color: #D76606;
     color: black;
     font-size: large;
     padding: 0.5em 0.8em;
@@ -162,7 +167,7 @@
 .boton a:hover {
     background-color: #FFD700; 
     color: black;
-    border-color: black;
+    border-color: #D76606;
 }
 
 .swal2-popup {
@@ -188,7 +193,7 @@
 /* -------------------------------------------------COMIENZA EL ESTILO DEL TABLERO ----------------------------------*/
 
 .section1{
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgb(255, 253, 253, 0.7);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
     margin: 40px auto;
@@ -207,8 +212,8 @@ button:hover{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 12px auto;
     text-align: center;
-    background-color: #8B0000;
-    width: 50%;
+    background-color: #D76606;
+    width: 15%;
     border-radius: 10px;
 }
 
@@ -226,4 +231,8 @@ button:hover{
     height: 40px;
     margin: 20px auto;
     border: 2px solid black;
+}
+/* -------------------------------------------------COMIENZA EL ESTILO DEL PERFIL ----------------------------------*/
+.datos-pefil{
+    text-align: right;
 }
