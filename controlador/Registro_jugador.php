@@ -11,12 +11,15 @@
             $extension = pathinfo($archivo['name'], PATHINFO_EXTENSION);
             $img = $extension;
 
+            ///password_hash
+            $hash = password_hash($contra, PASSWORD_DEFAULT,['cost'=>10]);
+
             if($img == 'jpg' or $img == 'jpeg' or $img == 'png'){
                 $carpeta_destino = "../recursos/img/fotoPerfil/";
                 $ruta_imagen = $carpeta_destino . $archivo['name'];
                 if (move_uploaded_file($archivo['tmp_name'], $ruta_imagen)) {
                     // La imagen se ha movido exitosamente, ahora guardamos la ruta en la base de datos
-                    $sql = $conexion->query("INSERT INTO jugadores (nombres, apellidos, fechaNacimiento, usuairo, contrasena, foto) VALUES ('$nombre', '$apellido', '$fecha', '$usuario', '$contra', '$ruta_imagen')");
+                    $sql = $conexion->query("INSERT INTO jugadores (nombres, apellidos, fechaNacimiento, usuairo, contrasena, foto) VALUES ('$nombre', '$apellido', '$fecha', '$usuario', '$hash', '$ruta_imagen')");
 
                     if($sql == 1){
                         echo '<div class="alert alert-success">Jugador registrado</div>';
