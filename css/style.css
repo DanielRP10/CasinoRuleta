@@ -152,6 +152,10 @@
     margin: 0 auto 0px;
 }
 
+.perfilFoto{
+    border-radius: 50%;
+}
+
 .boton a{
     text-decoration: none;
     background-color: #D76606;
@@ -202,34 +206,36 @@ button{
     width: 100px;
     height: 100px;
 }
-
+.timagen{
+    width: 100%;
+    height: 100%;
+}
 button:hover{
     cursor: pointer;
 }
-
-.tab{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 12px auto;
-    text-align: center;
-    background-color: #D76606;
-    width: 15%;
-    border-radius: 10px;
+main{
+    width: 730px;
+    margin: 30px auto;
+    display: flex;
 }
 
-.A{
-    background-color: #c9ac04;
+.fotoPerfil{
     width: 150px;
-    height: 40px;
-    margin: 20px auto;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 40px auto;
     border: 2px solid black;
 }
-
-.B{
-    background-color: #c9ac04;
+.jugar{
     width: 150px;
-    height: 40px;
-    margin: 20px auto;
-    border: 2px solid black;
+    height: 50px;
+    align-items: baseline;
+}
+.Quitar{
+    width: 150px;
+    height: 50px;
+    align-items: end;
 }
 /* -------------------------------------------------COMIENZA EL ESTILO DEL PERFIL ----------------------------------*/
 .datos-pefil{

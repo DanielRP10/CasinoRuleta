@@ -65,7 +65,7 @@
                 <h2 class="text-center">Perfil</h2>
                 <div class="featured-image mb-3">
                     <center>
-                        <img src="<?php echo $row['foto'];?>" class="img-fluid" style="width: 150px;">
+                        <img src="<?php echo $row['foto'];?>" class="img-fluid perfilFoto" style="width: 150px;">
                     </center>
                 </div>
                 <p style="color: black" class="text-center"> 

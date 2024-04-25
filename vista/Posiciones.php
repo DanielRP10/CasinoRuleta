@@ -14,7 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>GRUD CON PHP Y MYSQL</title>
 </head>
-<body>
+<body class="lg">
     <header class="titulo">
         <nav class="navbar navbar-expand-lg navbar-dark" id="menu-principal">
             <div class="container-fluid">
@@ -55,6 +55,7 @@
         </nav>
     </header>
     <div class="container-fluid row">
+        <div class="col-2"></div>
         <div class="col-8 p-4">
         <table class="table">
             <thead class="bg-info">
@@ -62,9 +63,8 @@
                 <th scope="col">IdJugador</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
+                <th scope="col">Foto</th>
                 <th scope="col">Puntaje</th>
-                
-                <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -78,6 +78,7 @@
                     <td><?=$datos->idJugador?></td>
                     <td><?=$datos->nombres?></td>
                     <td><?=$datos->apellidos?></td>
+                    <td><img src="<?=$datos->foto?>" class="img-fluid perfilFoto"  style="width: 30px;"></td>
                     <td><?php
                         if( $datos->puntaje <=0){
                             echo '0';
