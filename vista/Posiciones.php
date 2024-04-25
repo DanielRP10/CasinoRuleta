@@ -78,7 +78,13 @@
                     <td><?=$datos->idJugador?></td>
                     <td><?=$datos->nombres?></td>
                     <td><?=$datos->apellidos?></td>
-                    <td><?=$datos->puntaje?></td>
+                    <td><?php
+                        if( $datos->puntaje <=0){
+                            echo '0';
+                        }else{
+                            echo $datos->puntaje;
+                        }
+                    ?></td>
                     </tr>
                     <?php    
                     }

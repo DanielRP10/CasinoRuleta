@@ -3,6 +3,11 @@
     if (empty($_SESSION["idJugador"])){
         header("location: ../Login.php");
     }
+    include "../modelo/conexion.php";
+    $iduser = $_SESSION["idJugador"];
+    $sql = "SELECT nombres, apellidos, fechaNacimiento, usuairo, foto, puntaje FROM Jugadores WHERE idJugador = '$iduser'";
+    $result = $conexion->query($sql);
+    $row = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -56,11 +61,10 @@
             </div>
         </nav>
     </header>
-
         <div class="section">
             <div class="cuadro">
                 <div class="avatar">
-                    <img src="../recursos/img/usuario.png" class="img-fluid">
+                    <img src="<?php echo $row['foto'];?>" class="img-fluid" style="width: 150px">
                 </div>
                 <div class="boton">
                     <a href="PerfilUsuario.php">PERFIL</a>
