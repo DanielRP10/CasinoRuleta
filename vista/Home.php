@@ -60,10 +60,10 @@
             </div>
         </nav>
     </header>
-        <div class="section">
+            <div class="section">
             <div class="cuadro">
                 <div class="avatar">
-                    <img src="<?php echo $row['foto'];?>" class="img-fluid perfilFoto"  style="width: 150px;">
+                    <img src="<?php echo $row['foto'];?>" class="img-fluid" style="width: 150px">
                 </div>
                 <div class="boton">
                     <a href="PerfilUsuario.php">PERFIL</a>
@@ -77,7 +77,7 @@
                     <a href="tablero.php">JUGAR</a>
                 </div>
             </div>
-             <div class="cuadro">
+            <div class="cuadro">
                 <div class="avatar">
                     <img src="../recursos/img/logo-lugares.png" class="img-fluid">
                 </div>
@@ -87,8 +87,8 @@
             </div>
         </div>   
 
-    <script src="../js/javascrip.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="../js/javascrip.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
