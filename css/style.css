@@ -125,30 +125,32 @@
     border-color: #8B0000;
 }
 
-.section {
-    margin-top: 100px;
+.section{
+    width: 100%;
+    height: 300px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;
 }
 
-.cuadro {
-    width: 25%;
+.cuadro{
+    align-items: flex-end;
+    width: 20%;
     height: 350px;
-    margin: 40px;
+    background-color: rgb(125, 156, 135, 0.7);
+    border-radius: 5px;
+    padding: 35px;
+    box-sizing: border-box;
     text-align: center;
-    background-color: rgba(125, 156, 135, 0.7); 
-    padding: 20px;
-    border-radius: 10px; 
+    margin: 0 auto;
 }
 
-.avatar img {
-    width: 60%;
+.avatar{
+    width: 65%;
     height: 200px;
-    margin: 0 auto 20px;
+    margin: 0 auto 0px;
 }
-
 
 .perfilFoto{
     border-radius: 50%;
@@ -156,18 +158,13 @@
 
 .boton a{
     text-decoration: none;
-}
-.boton a {
-    display: inline-block; 
-    padding: 5px 10px; 
-    margin-top: 20px; 
     background-color: #D76606;
-    cursor: pointer;
     color: black;
-    text-decoration: none;
+    font-size: large;
+    padding: 0.5em 0.8em;
     border-radius: 5px;
+    cursor: pointer;
     border: 2px solid #FFD700;
-    font-size: 20px; 
 }
 
 .boton a:hover {
@@ -175,19 +172,6 @@
     color: black;
     border-color: #D76606;
 }
-
-@media (max-width: 768px) {
-    .cuadro {
-        width: 45%;
-    }
-}
-
-@media (max-width: 576px) {
-    .cuadro {
-        width: 100%;
-    }
-}
-
 
 .swal2-popup {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
