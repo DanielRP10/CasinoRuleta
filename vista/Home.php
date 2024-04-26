@@ -74,7 +74,7 @@
                     <img src="../recursos/img/logo-juego.jpg" class="img-fluid">
                 </div>
                 <div class="boton">
-                    <a href="#">JUGAR</a>
+                    <a href="tablero.php">JUGAR</a>
                 </div>
             </div>
             <div class="cuadro">
