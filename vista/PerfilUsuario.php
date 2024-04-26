@@ -61,82 +61,79 @@
     </header>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">     
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
-            <div class="col-md-6 rounded-4 d-flex flex-column left-box" style="background: #daeaf6">
-                <h2 class="text-center">Perfil</h2>
-                <div class="featured-image mb-3">
-                    <center>
-                        <img src="<?php echo $row['foto'];?>" class="img-fluid perfilFoto" style="width: 150px;">
-                    </center>
-                </div>
-                <p style="color: black" class="text-center"> 
-                    <?php 
-                        echo  $_SESSION["nombres"]." ".$_SESSION["apellidos"];
-                    ?>
-                </p>
-                
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Datos:</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Nombre</th>
-                            <td>
-                                <?php 
-                                    echo $row['nombres'];
-                                ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Apellido</th>
-                            <td>
-                                <?php 
-                                    echo $row['apellidos'];
-                                ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">F.Nacimiento</th>
-                            <td>
-                                <?php 
-                                    echo $row['fechaNacimiento'];
-                                ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Correo</th>
-                            <td>
-                                <?php 
-                                    echo $row['usuairo'];
-                                ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Puntos</th>
-                            <td>
-                                <?php
-                                    if( $row['puntaje'] <=0){
-                                        echo '0';
-                                    }else{
-                                        echo $row['puntaje'];
-                                    }
-                                ?>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-6 ring-box">
+           <center>
+            <div class="col-md-12 ring-box">
                 <div class="row align-items-center">
                     <div class="header-text mb-4 text-wrap text-center">
-                        <div>
-
+                        <h2 class="text-center">Perfil</h2>
+                        <div class="featured-image mb-3">
+                            <center>
+                                <img src="<?php echo $row['foto'];?>" class="img-fluid" style="width: 150px;">
+                            </center>
                         </div>
+                        <p style="color: black" class="text-center"> 
+                            <?php 
+                                echo  $_SESSION["nombres"]." ".$_SESSION["apellidos"];
+                            ?>
+                        </p>
+                        
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2" scope="col">Datos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Nombre</th>
+                                    <td>
+                                        <?php 
+                                            echo $row['nombres'];
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Apellido</th>
+                                    <td>
+                                        <?php 
+                                            echo $row['apellidos'];
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">F.Nacimiento</th>
+                                    <td>
+                                        <?php 
+                                            echo $row['fechaNacimiento'];
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Correo</th>
+                                    <td>
+                                        <?php 
+                                            echo $row['usuairo'];
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Puntos</th>
+                                    <td>
+                                        <?php
+                                            if( $row['puntaje'] <=0){
+                                                echo '0';
+                                            }else{
+                                                echo $row['puntaje'];
+                                            }
+                                        ?>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
+           </center> 
         </div>
     </div>
 </body>

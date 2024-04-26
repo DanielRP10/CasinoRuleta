@@ -60,10 +60,10 @@
             </div>
         </nav>
     </header>
-        <div class="section">
+    <div class="section">
             <div class="cuadro">
                 <div class="avatar">
-                    <img src="<?php echo $row['foto'];?>" class="img-fluid perfilFoto"  style="width: 150px;">
+                    <img src="<?php echo $row['foto'];?>" class="img-fluid">
                 </div>
                 <div class="boton">
                     <a href="PerfilUsuario.php">PERFIL</a>
@@ -74,10 +74,10 @@
                     <img src="../recursos/img/logo-juego.jpg" class="img-fluid">
                 </div>
                 <div class="boton">
-                    <a href="tablero.php">JUGAR</a>
+                    <a href="#">JUGAR</a>
                 </div>
             </div>
-             <div class="cuadro">
+            <div class="cuadro">
                 <div class="avatar">
                     <img src="../recursos/img/logo-lugares.png" class="img-fluid">
                 </div>
@@ -85,7 +85,7 @@
                     <a href="Posiciones.php">POSICIONES</a>
                 </div>
             </div>
-        </div>   
+        </div>
 
     <script src="../js/javascrip.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
