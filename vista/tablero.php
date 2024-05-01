@@ -61,7 +61,7 @@
     </header>
 
     <div class="fotoPerfil">
-        <img src="<?php echo $row['foto'];?>" class="img-fluid perfilFoto"  style="width: 150px;">
+        <img src="<?php echo $row['foto'];?>" class="img-fluid"  style="width: 150px; border-radius: 50%;">
         <h1 class="nombreJugador"></h1>
     </div>
 

@@ -19,7 +19,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body class="lg">
     <header class="titulo">
         <nav class="navbar navbar-expand-lg navbar-dark" id="menu-principal">
             <div class="container-fluid">
@@ -59,28 +59,39 @@
             </div>
         </nav>
     </header>
-    <div class="tituloganador">
-        <h1>GANADOR</h1>
-        <p id="winner">NINGUNO</p>
-    </div>
-    <div class="wheel">
-        <canvas id="canvas" width="500" height="500"></canvas>
-        <div class="center-circle" onclick="spin()">
-            <div class="triangle"></div>
+    <div class="container">
+        <div class="row">
+            <div class="tituloganador">
+                <h1>GANADOR</h1>
+                <p id="winner">NINGUNO</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="wheel">
+                    <canvas id="canvas" width="500" height="500"></canvas>
+                    <div class="center-circle" onclick="spin()">
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="inputArea" onchange="createWheel()">
+                    <textarea rows="20" cols="30">cat
+                    dog
+                    cow
+                    duck
+                    sheep
+                    goat
+                    bird
+                    neko
+                    chicken
+                    uso</textarea>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="inputArea" onchange="createWheel()">
-        <textarea rows="20" cols="30" class="iconosJugar">cat
-        dog
-        cow
-        duck
-        sheep
-        goat
-        bird
-        neko
-        chicken</textarea>
-    </div>
-    <script src="scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 
 </body>
 </html>

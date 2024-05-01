@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" style="color: black" href="Home.php">Inicio</a>
+                            <a class="nav-link active" style="color: black" href="Home.php">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: black" onclick='mostrarReglas()' href="#" >Reglas</a>
@@ -136,5 +136,8 @@
            </center> 
         </div>
     </div>
+    <script src="../js/javascrip.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
