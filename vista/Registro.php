@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="recursos/img/logo.png"/>
     <link rel="shortcut icon" href="../recursos/img/logo.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="lg">
     <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">

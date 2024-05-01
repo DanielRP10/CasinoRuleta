@@ -98,8 +98,8 @@
                 </tr>
             </table><br>
             <center>
-                <button class="btn-primary jugar">Jugar</button>
-                <button class="btn-success Quitar">Quitar</button>
+                <a href="Ruleta.php" class="btn btn-md btn-primary jugarbn">Jugar</a>
+                <a class="btn btn-md btn-success quitarbn" type="reset">Quitar</a>
             </center>
         </section>
     </main>

@@ -9,18 +9,17 @@
     $result = $conexion->query($sql);
     $row = $result->fetch_assoc();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>Spinner</title>
     <link rel="shortcut icon" href="../recursos/img/logo.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="lg">
+<body>
     <header class="titulo">
         <nav class="navbar navbar-expand-lg navbar-dark" id="menu-principal">
             <div class="container-fluid">
@@ -33,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: black" href="Home.php">Inicio</a>
+                            <a class="nav-link" style="color: black" href="Home.php">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: black" onclick='mostrarReglas()' href="#" >Reglas</a>
@@ -60,35 +59,28 @@
             </div>
         </nav>
     </header>
-    <div class="section">
-            <div class="cuadro">
-                <div class="avatar">
-                    <img src="<?php echo $row['foto'];?>" class="img-fluid fotoPerfil">
-                </div>
-                <div class="boton">
-                    <a href="PerfilUsuario.php">PERFIL</a>
-                </div>
-            </div>
-            <div class="cuadro">
-                <div class="avatar">
-                    <img src="../recursos/img/logo-juego.jpg" class="img-fluid fotoPerfil">
-                </div>
-                <div class="boton">
-                    <a href="tablero.php">JUGAR</a>
-                </div>
-            </div>
-            <div class="cuadro">
-                <div class="avatar">
-                    <img src="../recursos/img/logo-lugares.jpg" class="img-fluid fotoPerfil">
-                </div>
-                <div class="boton">
-                    <a href="Posiciones.php">POSICIONES</a>
-                </div>
-            </div>
+    <div class="tituloganador">
+        <h1>GANADOR</h1>
+        <p id="winner">NINGUNO</p>
+    </div>
+    <div class="wheel">
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div class="center-circle" onclick="spin()">
+            <div class="triangle"></div>
         </div>
+    </div>
+    <div class="inputArea" onchange="createWheel()">
+        <textarea rows="20" cols="30" class="iconosJugar">cat
+        dog
+        cow
+        duck
+        sheep
+        goat
+        bird
+        neko
+        chicken</textarea>
+    </div>
+    <script src="scripts.js"></script>
 
-    <script src="../js/javascrip.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
