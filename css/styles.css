@@ -239,21 +239,77 @@ main{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: white;
     margin: 40px auto;
     border: 2px solid black;
 }
-.jugar{
+.jugarbn{
     width: 150px;
-    height: 50px;
+    height: 40px;
     align-items: baseline;
+    color: white; 
+    text-decoration: none; 
+    justify-content: center;
+    align-items: center;
 }
-.Quitar{
+.quitarbn{
     width: 150px;
-    height: 50px;
-    align-items: end;
+    height: 40px;
+    align-items: baseline;
+    color: white; 
+    text-decoration: none; 
+    justify-content: center;
+    align-items: center;
 }
 /* -------------------------------------------------COMIENZA EL ESTILO DEL PERFIL ----------------------------------*/
 .datos-pefil{
     text-align: center;
 }
+/* -------------------------------------------------COMIENZA EL ESTILO DEL RULETA ----------------------------------*/
+.tituloganador{
+    padding: 40px;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.tituloganador h1,p{
+    text-align: center;
+}
+
+.wheel{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.center-circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.triangle{
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right: 30px solid white; 
+    position: absolute;
+    top: 50%;
+    right: -220%;
+    transform: translateY(-50%);
+}
+.iconosJugar{
+    background-color: rgba(20, 20, 20, 0.2);
+    caret-color: #fff;
+    resize: none;
+    color: #fff;
+}
+.inputArea{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+

@@ -61,7 +61,7 @@
     </header>
 
     <div class="fotoPerfil">
-        <img src="<?php echo $row['foto'];?>" class="img-fluid perfilFoto"  style="width: 150px;">
+        <img src="<?php echo $row['foto'];?>" class="img-fluid"  style="width: 150px; border-radius: 50%;">
         <h1 class="nombreJugador"></h1>
     </div>
 
@@ -98,8 +98,8 @@
                 </tr>
             </table><br>
             <center>
-                <button class="btn-primary jugar">Jugar</button>
-                <button class="btn-success Quitar">Quitar</button>
+                <a href="Ruleta.php" class="btn btn-md btn-primary jugarbn">Jugar</a>
+                <a class="btn btn-md btn-success quitarbn" type="reset">Quitar</a>
             </center>
         </section>
     </main>
