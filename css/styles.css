@@ -312,4 +312,28 @@ main{
     margin-top: 40px;
 }
 
+/* -------------------------------------------------COMIENZA EL ESTILO ACERCA DE ----------------------------------*/
 
+.descripcion{
+    text-align: center;
+    /*border: solid 3px red;*/
+}
+
+.integrante{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0px 30px;
+    padding: 1em;
+    border-radius: 30px ;
+    border: solid 3px #c7c7c7;
+    line-height: 30px;
+}
+
+.imgInt{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: -18px 12px 10px -8px rgba(0,0,0,0.75);
+}
