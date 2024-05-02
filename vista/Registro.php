@@ -11,7 +11,7 @@
 </head>
 <body class="lg">
     <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
-        <form action="" class="d-flex" method="POST" enctype="multipart/form-data">
+        <form action="" class="d-flex" method="POST" enctype="multipart/form-data" onsubmit="return verificarEdad()">
             <div class="row border rounded-5 p-1 bg-white shadow box-area registro-conte">
                 <div class="header-text mb-4 text-wrap text-center">
                     <h2>Registro</h2>
@@ -30,15 +30,15 @@
                 </div>
                 <div class="col-6 mb-3">
                     <label>Apellidos completos</label><br>
-                    <input type="tex" class="form-control form-control-lg bg-light fs-6" placeholder="Apellidos" name="apellido">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Apellidos" name="apellido">
                 </div>
                 <div class="col-6 mb-3">
                     <label>Fecha Nacimiento</label><br>
-                    <input type="date" class="form-control form-control-lg bg-light fs-6" name="fecha">
+                    <input type="date" class="form-control form-control-lg bg-light fs-6" name="fecha" id="fecha">
                 </div>
                 <div class="col-6 mb-3">
                     <label>Usuario</label><br>
-                    <input type="tex" class="form-control form-control-lg bg-light fs-6" placeholder="Usuario" name="usuario">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Usuario" name="usuario">
                 </div>
                 <div class="col-6 mb-3">
                     <label>Contraseña</label><br>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-6 mb-3 ">
                     <center>
-                        <button type="submit" class="btn btn-sm btn-success fs-6 bregistrar" name="btnregistrar" value="ok">Registrarme</button>
+                        <button type="submit" class="btn btn-sm btn-success fs-6 bregistrar" name="btnregistrar" id="btnregistrar" value="ok" disabled>Registrarme</button>
                     </center>
                 </div>
                 <div class="col-6 mb-3 ">
@@ -64,5 +64,42 @@
             </div>
         </form>
     </div>
+
+    <script>
+       
+        var inputFecha = document.getElementById("fecha");
+        var btnRegistrar = document.getElementById("btnregistrar");
+
+        // Agregar un evento para detectar cuando se cambia la fecha de nacimiento
+        inputFecha.addEventListener("change", function() {
+            // Obtener la fecha de nacimiento del input
+            var fechaNacimiento = inputFecha.value;
+            var fechaNacimientoObj = new Date(fechaNacimiento);
+            var añoActual = new Date().getFullYear();
+            var edad = añoActual - fechaNacimientoObj.getFullYear();
+
+            if (edad < 18) {
+                alert("Lo siento no puedes registrarte, debes tener al menos 18 años para acceder.");
+                inputFecha.value = "";
+                btnRegistrar.disabled = true;
+            } else {
+                btnRegistrar.disabled = false;
+            }
+        });
+        function verificarEdad() {
+            var fechaNacimiento = inputFecha.value;
+            var fechaNacimientoObj = new Date(fechaNacimiento);
+
+            // Obtener el año actual
+            var añoActual = new Date().getFullYear();
+            var edad = añoActual - fechaNacimientoObj.getFullYear();
+            if (edad < 18) {
+                alert("Lo siento no puedes registrarte, debes tener al menos 18 años para acceder.");
+                inputFecha.value = "";
+                return false; // No enviar el formulario
+            }
+            return true; // Enviar el formulario
+        }
+    </script>
 </body>
 </html>
