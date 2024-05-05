@@ -13,7 +13,12 @@ if (!empty($_POST["btniniciar"])) {
                 $_SESSION["idJugador"] = $datos->idJugador;
                 $_SESSION["nombres"] = $datos->nombres;
                 $_SESSION["apellidos"] = $datos->apellidos;
-                header("location: vista/Home.php");
+
+                if ($datos->idJugador == 1) {
+                    header("location: vista/HomeAdmin.php");
+                } else {
+                    header("location: vista/Home.php");
+                }
                 exit; 
             } else {
                 echo '<div class="alert alert-danger">Acceso Denegado</div>';
