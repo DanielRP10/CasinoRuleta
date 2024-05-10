@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-6 mb-3 ">
                     <center>
-                        <button type="submit" class="btn btn-sm btn-success fs-6 bregistrar" name="btnregistrar" id="btnregistrar" value="ok" disabled>Registrarme</button>
+                        <button type="submit" class="btn btn-sm btn-success fs-6 bregistrar" name="btnregistrar" id="btnregistrar" value="ok">Registrarme</button>
                     </center>
                 </div>
                 <div class="col-6 mb-3 ">
