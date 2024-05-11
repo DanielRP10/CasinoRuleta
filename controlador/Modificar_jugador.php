@@ -24,7 +24,7 @@
                     $sql = $conexion->query("UPDATE jugadores SET nombres='$nombre', apellidos='$apellido', fechaNacimiento='$fecha', usuairo='$usuario', contrasena='$hash', foto='$ruta_imagen', puntaje=$punto WHERE idJugador=$id");
 
                     if($sql == 1){
-                        header("../vista/CRUD Usuarios.php");
+                        header("location: ../vista/CRUD Usuarios.php");
                     }else{
                         echo '<div class="alert alert-danger">Jugador no se modifico</div>';
                     }
