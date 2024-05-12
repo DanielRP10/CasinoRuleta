@@ -33,7 +33,7 @@
                             <a class="nav-link" style="color: black" onclick='mostrarReglas()' href="#" >Reglas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: black" href="#">Acerca de</a>
+                            <a class="nav-link" style="color: black" href="acerca.php">Acerca de</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: black" href="../controlador/CerrarSessionControlador.php">Salir</a>

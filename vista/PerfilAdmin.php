@@ -32,13 +32,13 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: black" href="Home.php">Inicio</a>
+                            <a class="nav-link active" style="color: black" href="HomeAdmin.php">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: black" onclick='mostrarReglas()' href="#" >Reglas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: black" href="acerca.php">Acerca de</a>
+                            <a class="nav-link" style="color: black" href="AcercaAdmin.php">Acerca de</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: black" href="../controlador/CerrarSessionControlador.php">Salir</a>

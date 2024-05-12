@@ -12,6 +12,7 @@
             $extension = pathinfo($archivo['name'], PATHINFO_EXTENSION);
             $img = $extension;
             $punto = $_POST["punto"];
+            $intentos = $_POST["intentos"];
 
             ///password_hash
             $hash = password_hash($contra, PASSWORD_DEFAULT,['cost'=>10]);
@@ -21,7 +22,7 @@
                 $ruta_imagen = $carpeta_destino . $archivo['name'];
                 if (move_uploaded_file($archivo['tmp_name'], $ruta_imagen)) {
                     // La imagen se ha movido exitosamente, ahora guardamos la ruta en la base de datos
-                    $sql = $conexion->query("UPDATE jugadores SET nombres='$nombre', apellidos='$apellido', fechaNacimiento='$fecha', usuairo='$usuario', contrasena='$hash', foto='$ruta_imagen', puntaje=$punto WHERE idJugador=$id");
+                    $sql = $conexion->query("UPDATE jugadores SET nombres='$nombre', apellidos='$apellido', fechaNacimiento='$fecha', usuairo='$usuario', contrasena='$hash', foto='$ruta_imagen', puntaje=$punto, intentos=$intentos WHERE idJugador=$id");
 
                     if($sql == 1){
                         header("location: ../vista/CRUD Usuarios.php");

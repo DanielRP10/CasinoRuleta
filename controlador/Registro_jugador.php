@@ -8,6 +8,8 @@
             $usuario = $_POST["usuario"];
             $contra = $_POST["contra"];
             $archivo = $_FILES['foto'];
+            $puntos = $_POST["puntos"];
+            $intentos = $_POST["intentos"];
             $extension = pathinfo($archivo['name'], PATHINFO_EXTENSION);
             $img = $extension;
 
@@ -19,7 +21,7 @@
                 $ruta_imagen = $carpeta_destino . $archivo['name'];
                 if (move_uploaded_file($archivo['tmp_name'], $ruta_imagen)) {
                     // La imagen se ha movido exitosamente, ahora guardamos la ruta en la base de datos
-                    $sql = $conexion->query("INSERT INTO jugadores (nombres, apellidos, fechaNacimiento, usuairo, contrasena, foto) VALUES ('$nombre', '$apellido', '$fecha', '$usuario', '$hash', '$ruta_imagen')");
+                    $sql = $conexion->query("INSERT INTO jugadores (nombres, apellidos, fechaNacimiento, usuairo, contrasena, foto, puntaje, intentos) VALUES ('$nombre', '$apellido', '$fecha', '$usuario', '$hash', '$ruta_imagen', $puntos, $intentos)");
 
                     if($sql == 1){
                         echo '<div class="alert alert-success">Jugador registrado</div>';

@@ -15,6 +15,12 @@
     <title>GRUD USUAIROS</title>
 </head>
 <body class="lg">
+    <script>
+        function eliminar(){
+            var respuesta=confirm("¿Estas seguro de eliminar este registro?");
+            return respuesta;
+        }
+    </script>
     <header class="titulo">
         <nav class="navbar navbar-expand-lg navbar-dark" id="menu-principal">
             <div class="container-fluid">
@@ -33,7 +39,7 @@
                             <a class="nav-link" style="color: black" onclick='mostrarReglas()' href="#" >Reglas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: black" href="acerca.php">Acerca de</a>
+                            <a class="nav-link" style="color: black" href="AcercaAdmin.php">Acerca de</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: black" href="../controlador/CerrarSessionControlador.php">Salir</a>
@@ -57,6 +63,10 @@
     <div class="container-fluid row">
         <div class="col-1"></div>
         <div class="col-10 p-4 " >
+            <?php 
+                include "../modelo/conexion.php";
+                include "../controlador/Eliminar_jugador.php";
+            ?>
             <table class="table">
                 <thead class="table-info">
                     <tr>
@@ -67,6 +77,7 @@
                     <th scope="col">Usuario</th>
                     <th scope="col">Foto</th>
                     <th scope="col">Puntaje</th>
+                    <th scope="col">Intentos</th>
                     <th scope="col">Accion</th>
                     </tr>
                 </thead>
@@ -83,16 +94,11 @@
                         <td><?=$datos->fechaNacimiento?></td>
                         <td><?=$datos->usuairo?></td>
                         <td><img src="<?=$datos->foto?>" class="img-fluid perfilFoto"  style="width: 30px;"></td>
-                        <td><?php
-                            if( $datos->puntaje <=0){
-                                echo '0';
-                            }else{
-                                echo $datos->puntaje;
-                            }
-                        ?></td>
+                        <td><?=$datos->puntaje?></td>
+                        <td><?=$datos->intentos?></td>
                         <td>
                             <a href="Modificar_jugadores.php?id=<?=$datos->idJugador?>" class="btn btn-small btn-warning"><i class="fa-regular fa-pen-to-square"></i></a>
-                            <a href="" class="btn btn-small btn-danger"><i class="fa-regular fa-trash-can"></i></a>
+                            <a onclick="return eliminar()" href="CRUD Usuarios.php?id=<?=$datos->idJugador?>" class="btn btn-small btn-danger"><i class="fa-regular fa-trash-can"></i></a>
                         </td>
                         </tr>
                         <?php    

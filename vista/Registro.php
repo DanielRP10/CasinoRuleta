@@ -48,6 +48,8 @@
                     <label>Foto</label><br>
                     <input type="file" class="form-control form-control-lg bg-light fs-6" name="foto">
                 </div>
+                <input type="hidden" name="puntos" value="0">
+                <input type="hidden" name="intentos" value="0">
                 <div class="col-6 mb-3 ">
                     <center>
                         <button type="submit" class="btn btn-sm btn-success fs-6 bregistrar" name="btnregistrar" id="btnregistrar" value="ok">Registrarme</button>

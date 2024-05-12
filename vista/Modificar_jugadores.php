@@ -64,6 +64,10 @@ $sql=$conexion->query("SELECT * FROM Jugadores WHERE idJugador=$id");
                                     <label>Puntaje</label><br>
                                     <input type="text" class="form-control form-control-lg bg-light fs-6" name="punto" value="<?= $datos->puntaje ?>">
                                 </div>
+                                <div class="col-6 mb-3">
+                                    <label>Intentos</label><br>
+                                    <input type="text" class="form-control form-control-lg bg-light fs-6" name="intentos" value="<?= $datos->intentos ?>">
+                                </div>
                             <?php }
                         } else {
                             echo "No se encontraron resultados para el ID proporcionado.";
