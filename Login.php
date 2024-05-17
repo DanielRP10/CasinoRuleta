@@ -36,9 +36,10 @@
                         </div>
                         <div class="input-group mb-3">
                             <button type="submit" class="btn btn-md btn-primary w-100 h-50 fs-6" name="btniniciar" value="ok">Iniciar Sesion</button>
+                            <small><a href="vista/Registro.php">¿Olvidaste tu contraseña?</a></small>
                         </div>
                         <div class="row">
-                            <small>¿No tienes cuenta? <a href="vista/Registro.php">Regístrate ahora</a></small>
+                            <small>¿No tienes cuenta? <a href="vista/Registro.php">Registrate ahora</a></small>
                         </div>
                     </form>
                 </div>

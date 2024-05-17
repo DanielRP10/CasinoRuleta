@@ -215,7 +215,7 @@
     background-color: rgb(255, 253, 253, 0.7);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
-    margin: 40px auto;
+    margin: 50px auto;
 }
 
 button{
@@ -259,6 +259,89 @@ main{
     text-decoration: none; 
     justify-content: center;
     align-items: center;
+}
+
+.contenedor-numeros {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #e8e8e8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.numero {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background-color: #00055d;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.numero.seleccionado {
+    background-color: #066f14;
+}
+
+.numero.deshabilitado {
+    background-color: #6d6d6d;
+    cursor: not-allowed;
+}
+
+#girar, #reiniciar {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #31cc2e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#girar:hover, #reiniciar:hover {
+    background-color: #31cc2e;
+}
+
+.mensaje {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+.contenedor-puntaje {
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: gold;
+    border-radius: 5px;
+    color: #2c3e50;
+}
+
+.puntaje {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+.flecha {
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 5px);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #000; /* Solo la punta de la flecha es de color negro */
+    transform-origin: bottom;
+    transition: transform 5s ease-in-out;
 }
 /* -------------------------------------------------COMIENZA EL ESTILO DEL PERFIL ----------------------------------*/
 .datos-pefil{

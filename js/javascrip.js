@@ -22,22 +22,3 @@ function mostrarReglas() {
     });
 }
 
-// Obtener todos los botones de imagen
-var botonesImagen = document.querySelectorAll('.timagen');
-
-// Agregar un controlador de eventos clic a cada botón de imagen
-botonesImagen.forEach(function(boton) {
-    boton.addEventListener('click', function() {
-        // Deshabilitar todos los botones de imagen
-        botonesImagen.forEach(function(b) {
-            b.disabled = true;
-        });
-
-        // Habilitar solo el botón de imagen clicado
-        this.disabled = false;
-
-        // Guardar la imagen seleccionada en una variable (si es necesario)
-        var imagenSeleccionada = this.src;
-        console.log('Imagen seleccionada:', imagenSeleccionada);
-    });
-});
