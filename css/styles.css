@@ -213,54 +213,57 @@
 
 .section1{
     background-color: rgb(255, 253, 253, 0.7);
-    padding: 0 10px 10px 10px;
+    padding: 0 5% 10px 5%; /* Ajustando los márgenes horizontalmente */
     border-radius: 8px;
-    margin: 50px auto;
+    margin: 5% auto; /* Centrando verticalmente */
 }
 
 button{
-    width: 100px;
-    height: 100px;
+    width: 30%; /* Utilizando un porcentaje para el ancho */
+    height: auto; /* Permitiendo que la altura se ajuste automáticamente según el contenido */
+    max-width: 150px; /* Limitando el ancho máximo */
+    margin: 10px; /* Agregando espaciado entre los botones */
 }
 .timagen{
     width: 100%;
-    height: 100%;
+    height: auto; /* Permitiendo que la altura se ajuste automáticamente según el contenido */
 }
+
 button:hover{
     cursor: pointer;
 }
+
 main{
-    width: 730px;
-    margin: 30px auto;
+    width: 90%; /* Utilizando un porcentaje del ancho de la pantalla */
+    margin: 5% auto; /* Centrando verticalmente */
     display: flex;
+    flex-wrap: wrap; /* Permitiendo que los elementos se envuelvan cuando no haya suficiente espacio */
+    justify-content: space-between; /* Espaciando uniformemente los elementos en la fila */
 }
 
 .fotoPerfil{
-    width: 150px;
-    height: 150px;
+    width: 30%; /* Utilizando un porcentaje para el ancho */
+    max-width: 150px; /* Limitando el ancho máximo */
+    height: auto; /* Permitiendo que la altura se ajuste automáticamente según el contenido */
     border-radius: 50%;
-    margin: 40px auto;
+    margin: 10% auto; /* Centrando verticalmente y agregando margen superior e inferior */
     border: 2px solid black;
 }
-.jugarbn{
-    width: 150px;
-    height: 40px;
-    align-items: baseline;
-    color: white; 
-    text-decoration: none; 
-    justify-content: center;
-    align-items: center;
-}
-.quitarbn{
-    width: 150px;
-    height: 40px;
-    align-items: baseline;
-    color: white; 
-    text-decoration: none; 
-    justify-content: center;
-    align-items: center;
-}
 
+.jugarbn, .quitarbn{
+    width: 100%; /* Utilizando un porcentaje para el ancho */
+    max-width: 150px; /* Limitando el ancho máximo */
+    height: auto; /* Permitiendo que la altura se ajuste automáticamente según el contenido */
+    margin: 10px auto; /* Centrando horizontalmente y agregando margen */
+    text-align: center; /* Centrando el texto */
+    padding: 10px; /* Añadiendo relleno */
+    background-color: #31cc2e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 .contenedor-numeros {
     position: relative;
     width: 300px;
@@ -343,56 +346,44 @@ main{
     transform-origin: bottom;
     transition: transform 5s ease-in-out;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .contenedor-numeros {
+        text-align: center; /* Centrar los números horizontalmente */
+        margin-left: 15px;
+    }
+
+    #girar, #reiniciar, .contenedor-puntaje, .puntaje {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto; /* Centrar horizontalmente con márgenes automáticos */
+        display: block;
+        text-align: center;
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor-numeros {
+        text-align: center; /* Centrar los números horizontalmente */
+        margin-left: 15px;
+    }
+
+    #girar, #reiniciar, .contenedor-puntaje, .puntaje {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto; /* Centrar horizontalmente con márgenes automáticos */
+        display: block;
+        text-align: center;
+        margin-left: 80px;
+    }
+}
+
 /* -------------------------------------------------COMIENZA EL ESTILO DEL PERFIL ----------------------------------*/
 .datos-pefil{
     text-align: center;
-}
-/* -------------------------------------------------COMIENZA EL ESTILO DEL RULETA ----------------------------------*/
-.tituloganador{
-    padding: 40px;
-    color: #fff;
-    margin: 0 auto;
-    margin-bottom: 40px;
-}
-.tituloganador h1,p{
-    text-align: center;
-}
-
-.wheel{
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.center-circle{
-    width: 100px;
-    height: 100px;
-    border-radius: 60px;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.triangle{
-    width: 0; 
-    height: 0; 
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    border-right: 30px solid white; 
-    position: absolute;
-    top: 50%;
-    right: -220%;
-    transform: translateY(-50%);
-}
-.iconosJugar{
-    background-color: rgba(20, 20, 20, 0.2);
-    caret-color: #fff;
-    resize: none;
-    color: #fff;
-}
-.inputArea{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
 }
 
 /* -------------------------------------------------COMIENZA EL ESTILO ACERCA DE ----------------------------------*/
