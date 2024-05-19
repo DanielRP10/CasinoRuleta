@@ -50,27 +50,42 @@
                 </div>
                 <input type="hidden" name="puntos" value="0">
                 <input type="hidden" name="intentos" value="0">
-                <div class="col-6 mb-3 ">
-                    <center>
-                        <button type="submit" class="btn btn-sm btn-success fs-6 bregistrar" name="btnregistrar" id="btnregistrar" value="ok">Registrarme</button>
-                    </center>
-                </div>
-                <div class="col-6 mb-3 ">
-                    <center>
-                        <button type="reset" class="btn btn-sm btn-primary fs-6 bregistrar">Limpiar</button>
-                    </center>
+                <div class="col-12 mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="checkboxTerminos" required>
+                    <label class="form-check-label" for="checkboxTerminos">Acepto los <small><a href="#" onclick="mostrarTerminos()">Términos y condiciones</a></small></label>
                 </div>
                 <div class="row">
                     <small>¿Ya tienes cuenta? <a href="../Login.php">Iniciar Sesion</a></small>
+                </div>
+                <br><br>
+                <!-- Enlace para los términos y condiciones -->
+                <div class="col-12 mb-3 ">
+                    <center>
+                        <button type="submit" class="btn btn-sm btn-success fs-6 bregistrar" name="btnregistrar" id="btnregistrar" value="ok" disabled>Registrarme</button>
+                    </center>
                 </div>
             </div>
         </form>
     </div>
 
+    <!-- Script para mostrar los términos y condiciones -->
     <script>
-       
+        function mostrarTerminos() {
+            // Aquí defines los términos y condiciones
+            var terminos = "\nTérminos y condiciones:\n\n1. Uso del servicio: El usuario acepta utilizar este servicio únicamente para fines legales y de acuerdo con estos términos y condiciones.\n2. Privacidad de los datos: Los datos proporcionados por el usuario serán tratados de acuerdo con nuestra política de privacidad. No compartiremos ni venderemos sus datos a terceros.\n3. Responsabilidad: No nos hacemos responsables por el uso inadecuado del servicio por parte del usuario. El usuario asume toda la responsabilidad por su conducta mientras utiliza este servicio.\n4. Seguridad: Nos comprometemos a mantener la seguridad de los datos del usuario y a protegerlos contra accesos no autorizados o divulgación.\n5. Modificaciones: Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Se notificará al usuario de cualquier cambio significativo.\n";
+
+            // Muestra una alerta con los términos y condiciones
+            alert(terminos);
+        }
+
         var inputFecha = document.getElementById("fecha");
+        var checkboxTerminos = document.getElementById("checkboxTerminos");
         var btnRegistrar = document.getElementById("btnregistrar");
+
+        // Agregar un evento al checkbox para habilitar o deshabilitar el botón de registro
+        checkboxTerminos.addEventListener("change", function() {
+            btnRegistrar.disabled = !checkboxTerminos.checked;
+        });
 
         // Agregar un evento para detectar cuando se cambia la fecha de nacimiento
         inputFecha.addEventListener("change", function() {
@@ -85,7 +100,8 @@
                 inputFecha.value = "";
                 btnRegistrar.disabled = true;
             } else {
-                btnRegistrar.disabled = false;
+                // Habilitar o deshabilitar el botón de registro dependiendo del estado del checkbox
+                btnRegistrar.disabled = !checkboxTerminos.checked;
             }
         });
         function verificarEdad() {
@@ -98,6 +114,11 @@
             if (edad < 18) {
                 alert("Lo siento no puedes registrarte, debes tener al menos 18 años para acceder.");
                 inputFecha.value = "";
+                return false; // No enviar el formulario
+            }
+            // Verificar si el checkbox está marcado
+            if (!checkboxTerminos.checked) {
+                alert("Debes aceptar los términos y condiciones para continuar.");
                 return false; // No enviar el formulario
             }
             return true; // Enviar el formulario

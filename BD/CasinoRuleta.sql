@@ -10,7 +10,8 @@ create table Jugadores(
     usuairo varchar(15),
     contrasena varchar(200),
     foto varchar(300),
-    puntaje int unsigned
+    puntaje int unsigned,
+    intentos int
 );
 select * from Jugadores;
 
