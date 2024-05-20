@@ -70,8 +70,8 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
                 <div class="table-responsive">
                     <br><br>
                     <table class="table table-striped">

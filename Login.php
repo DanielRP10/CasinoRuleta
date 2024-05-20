@@ -34,9 +34,8 @@
                             <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Contraseña" name="contra">
                             <!-- <div class="fas fa-eye verPassword" onclick="vista()" id="verPassword"></div> -->
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-3 d-flex justify-content-center">
                             <button type="submit" class="btn btn-md btn-primary w-100 h-50 fs-6" name="btniniciar" value="ok">Iniciar Sesion</button>
-                            <small><a href="vista/Registro.php">¿Olvidaste tu contraseña?</a></small>
                         </div>
                         <div class="row">
                             <small>¿No tienes cuenta? <a href="vista/Registro.php">Registrate ahora</a></small>
