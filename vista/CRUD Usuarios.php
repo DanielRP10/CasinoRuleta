@@ -1,7 +1,7 @@
 <?php 
     session_start();
     if (empty($_SESSION["idJugador"])){
-        header("location: ../Login.php");
+        header("location: ../index.php");
     }
 ?>
 <!DOCTYPE html>

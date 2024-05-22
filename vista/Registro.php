@@ -55,7 +55,7 @@
                     <label class="form-check-label" for="checkboxTerminos">Acepto los <small><a href="#" onclick="mostrarTerminos()">Términos y condiciones</a></small></label>
                 </div>
                 <div class="row">
-                    <small>¿Ya tienes cuenta? <a href="../Login.php">Iniciar Sesion</a></small>
+                    <small>¿Ya tienes cuenta? <a href="../index.php">Iniciar Sesion</a></small>
                 </div>
                 <br><br>
                 <!-- Enlace para los términos y condiciones -->
