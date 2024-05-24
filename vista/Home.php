@@ -71,7 +71,7 @@
             </div>
             <div class="cuadro">
                 <div class="avatar">
-                    <img src="../recursos/img/logo-juego.jpg" class="img-fluid fotoPerfil">
+                    <img src="../recursos/imgTablero/USO.png" class="img-fluid fotoPerfil">
                 </div>
                 <div class="boton">
                     <a href="tablero.php">JUGAR</a>
@@ -79,7 +79,7 @@
             </div>
             <div class="cuadro">
                 <div class="avatar">
-                    <img src="../recursos/img/logo-lugares.jpg" class="img-fluid fotoPerfil">
+                    <img src="../recursos/imgTablero/flor.png" class="img-fluid fotoPerfil">
                 </div>
                 <div class="boton">
                     <a href="Posiciones.php">POSICIONES</a>

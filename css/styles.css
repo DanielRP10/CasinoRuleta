@@ -2,8 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 .lg{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url('../recursos/img/fondo.jpeg');
+    font-family: Verdana, Geneva, Tahoma, sans-serif;/* 
+    background-image: url('../recursos/img/fondo.jpeg'); */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
 }
