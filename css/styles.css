@@ -2,8 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 .lg{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;/* 
-    background-image: url('../recursos/img/fondo.jpeg'); */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #8360c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
 }
@@ -177,15 +179,30 @@
     border-color: #D76606;
 }
 
+.fotoPerfil {
+    border-radius: 50%; 
+    width: 100px;
+    height: 100px; 
+    object-fit: cover; 
+}
+
 @media (max-width: 768px) {
     .cuadro {
         width: 45%;
+    }
+    .fotoPerfil{
+        width: 100px; /* Ajusta el tamaño para pantallas más pequeñas */
+        height: 100px; /* Mantiene la forma redonda */
     }
 }
 
 @media (max-width: 576px) {
     .cuadro {
         width: 100%;
+    }
+    .fotoPerfil {
+        width: 80px; /* Ajusta el tamaño para pantallas aún más pequeñas */
+        height: 80px; /* Mantiene la forma redonda */
     }
 }
 
@@ -208,6 +225,11 @@
     height: auto;
     font-size: 16px; 
 }
+
+.custom-title {
+    color: #1676b1; /* Cambia esto al color que desees para el título */
+}
+
 
 /* -------------------------------------------------COMIENZA EL ESTILO DEL TABLERO ----------------------------------*/
 
@@ -241,7 +263,7 @@ main{
     justify-content: space-between; /* Espaciando uniformemente los elementos en la fila */
 }
 
-.fotoPerfil{
+.fotoPerfil2{
     width: 30%; /* Utilizando un porcentaje para el ancho */
     max-width: 150px; /* Limitando el ancho máximo */
     height: auto; /* Permitiendo que la altura se ajuste automáticamente según el contenido */
